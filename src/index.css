@@ -1,0 +1,83 @@
+:root {
+  --font-family: "Helvetica Neue", Roboto, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 400;
+  --color-text: #11101c;
+  --color-bg: #fbfbfb;
+
+}
+
+/* Червона тема */
+.theme-red {
+  --color-primary: #F03F3B;
+  --color-hover-primary: #F1CDCD;
+}
+
+/* Синя тема */
+.theme-blue {
+  --color-primary: #0957C3;
+  --color-hover-primary: #C3D2E8;
+}
+
+/* Темна (зелено-чорна) тема */
+.theme-dark {
+  --color-primary: #103931;
+  --color-hover-primary: #C4CCCB;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: 500;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fbfbfb;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
