@@ -2,26 +2,26 @@
   --font-family: "Helvetica Neue", Roboto, sans-serif;
   --line-height: 1.5;
   --font-weight: 400;
-  --color-text: #11101c;
+  --color-text: #191A15;
   --color-bg: #fbfbfb;
 
 }
 
 /* Червона тема */
-.theme-red {
-  --color-primary: #F03F3B;
+.theme-orange {
+  --color-primary: #FC832C;
   --color-hover-primary: #F1CDCD;
 }
 
 /* Синя тема */
 .theme-blue {
-  --color-primary: #0957C3;
+  --color-primary: #3470FF;
   --color-hover-primary: #C3D2E8;
 }
 
 /* Темна (зелено-чорна) тема */
-.theme-dark {
-  --color-primary: #103931;
+.theme-green {
+  --color-primary: #54BE96;
   --color-hover-primary: #C4CCCB;
 }
 

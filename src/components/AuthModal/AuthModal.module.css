@@ -1,0 +1,54 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(18, 20, 23, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    background: white;
+    border-radius: 30px;
+    position: relative;
+    max-width: 288px;
+    min-height: 300px;
+    width: 100%;
+    padding: 34px;
+    z-index: 1000;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #121417;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 375px) {
+    .modal {
+        max-width: 345px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .modal {
+        max-width: 565px;
+        min-height: 489px;
+        padding: 64px;
+    }
+
+    .close {
+        top: 20px;
+        right: 30px;
+        font-size: 50px;
+    }
+}

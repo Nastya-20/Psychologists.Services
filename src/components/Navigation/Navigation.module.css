@@ -1,0 +1,224 @@
+.headerContainer {
+    min-width: 290px;
+    background-color: var(--color-primary);
+    margin: 15px 15px 0 15px;
+    padding: 15px;
+    border-radius: 30px 30px 0 0;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 88px;
+}
+
+.navTitle {
+    width: 154px;
+    height: 20px;
+    text-decoration: none;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 112%;
+    letter-spacing: 0.01em;
+    color: #fbfbfb;
+}
+
+.navigation {
+    display: none;
+}
+
+.navUserMenu {
+    display: none;
+}
+
+.openMenuBtn {
+    padding: 0;
+    line-height: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.openMenuIcons {
+    stroke: #fbfbfb;
+}
+
+
+@media screen and (min-width: 375px) {
+    .headerContainer {
+        padding: 20px;
+        margin: 20px 20px 0 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .headerContainer {
+        padding: 30px;
+        margin: 32px 32px 0 32px;
+    }
+
+    .navTitle {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .headerContainer {
+        /* background-color: var(--color-primary); */
+        height: 88px;
+        padding: 30px 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    /* Для головної сторінки фіксуємо хедер */
+    .fixed {
+        background-color: transparent;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 1184px;
+        height: 48px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+        margin: 0 auto;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-right: 80px;
+    }
+
+    .active {
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        color: #fbfbfb;
+        position: relative;
+    }
+
+    .active::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: #fbfbfb;
+        border-radius: 50%;
+    }
+
+    .openMenuIcons {
+        display: none;
+    }
+
+    .navTitle {
+        width: 164px;
+        height: 28px;
+        font-size: 24px;
+        margin-right: 487px;
+    }
+
+    .navUserMenu {
+        display: block;
+    }
+}
+
+/* Мобільне меню */
+
+.mobileMenuBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(24, 24, 24, 0.4);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
+}
+
+/* Саме меню */
+.mobileMenu {
+    width: 85%;
+    max-width: 320px;
+    height: 500px;
+    background-color: #fbfbfb;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+/* Кнопка закриття */
+.closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #11101C;
+    cursor: pointer;
+}
+
+/* Посилання у мобільному меню */
+
+.mobileLink {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobileLinkItem {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    color: #11101C;
+}
+
+.mobileLinkItem:hover,
+.mobileLinkItem:focus {
+    color: var(--color-primary);
+}
+
+/* Показувати меню тільки на мобільних */
+@media screen and (min-width: 769px) {
+    .openMenuBtn {
+        display: none;
+    }
+
+    .mobileMenuBackdrop {
+        display: none;
+    }
+}

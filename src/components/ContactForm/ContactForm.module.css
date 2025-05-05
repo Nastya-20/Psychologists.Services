@@ -1,0 +1,500 @@
+.overlayContact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.modalContact {
+    background: #fbfbfb;
+    border-radius: 30px;
+    position: relative;
+    overflow-y: auto;
+    top: 200px;
+    min-width: 290px;
+    min-height: 800px;
+    padding: 40px 20px;
+    z-index: 1000;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 36px;
+    font-weight: 500;
+    color: #11101C;
+    cursor: pointer;
+}
+
+.contactTitle {
+    width: 220px;
+    height: 96px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    color: #11101c;
+    margin-bottom: 20px;
+}
+
+.contactText {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: rgba(17, 16, 28, 0.5);
+    margin-bottom: 40px;
+}
+
+.infoNanny {
+    width: 192px;
+    height: 44px;
+    display: flex;
+    gap: 14px;
+    margin-bottom: 23px;
+}
+
+.imgNanny {
+    border-radius: 100px;
+    width: 44px;
+    height: 44px;
+}
+
+.nannyText {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a89;
+    margin-bottom: 4px;
+}
+
+.nannyName {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #11101C;
+}
+
+.contactForm {
+    min-height: 300px;
+}
+
+.input {
+    border: 1px solid rgba(17, 16, 28, 0.1);
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 16px 15px 16px 18px;
+    height: 52px;
+    width: 250px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: #11101C;
+    outline: none;
+}
+
+input::placeholder {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: #11101C;
+}
+
+input:hover,
+input:focus {
+    background-color: #fff;
+}
+
+.timeDropdown {
+    position: relative;
+    width: 100%;
+}
+
+.timeDropdown button {
+    width: 250px;
+    padding: 16px 18px;
+    border: 1px solid rgba(17, 16, 28, 0.1);
+    background-color: #fff;
+    cursor: pointer;
+    text-align: left;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #11101c;
+}
+
+.infoContact {
+    border: 1px solid rgba(17, 16, 28, 0.1);
+    border-radius: 12px;
+    padding: 16px 18px;
+    width: 250px;
+    height: 52px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: #11101c;
+    margin-bottom: 4px;
+    outline: none;
+}
+
+.timeInputWrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px;
+}
+
+.iconClock {
+    position: absolute;
+    cursor: pointer;
+    top: 35px;
+    right: 18px;
+    width: 16px;
+    height: 16px;
+    fill: #fafafa;
+    stroke: #11101c;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    width: 151px;
+    max-height: 180px;
+    overflow-y: auto;
+    background: white;
+    box-shadow: 0 20px 69px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.dropdownItem {
+    padding: 10px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    text-align: center;
+    color: rgba(17, 16, 28, 0.3);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus {
+    color: #11101c;
+}
+
+.dropdownItem:active {
+    color: #11101c;
+}
+
+.disabledItem {
+    color: #11101c;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    pointer-events: none;
+    cursor: default;
+}
+
+.comment {
+    width: 250px;
+    min-height: 116px;
+    border: 1px solid rgba(17, 16, 28, 0.1);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 40px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: #11101C;
+    outline: none;
+}
+
+textarea::placeholder {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: #11101C;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea:hover,
+textarea:focus {
+    outline: none;
+}
+
+.buttonContact {
+    border-radius: 30px;
+    padding: 16px;
+    width: 250px;
+    height: 52px;
+    background-color: var(--color-primary);
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fbfbfb;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buttonContact:hover,
+.buttonContact:focus {
+    color: var(--color-primary);
+    background-color: #fbfbfb;
+    border: 1px solid var(--color-primary);
+}
+
+.buttonContact:active {
+    color: var(--color-primary);
+    background-color: #fbfbfb;
+    border: 1px solid var(--color-primary);
+}
+
+.error {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 125%;
+    color: #e63232;
+    margin-bottom: 4px;
+    min-height: 12px;
+}
+
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+    background-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+    /* Вимикає автофонове підсвічування */
+    color: black !important;
+}
+
+.infoContact:-webkit-autofill,
+.infoContact:-webkit-autofill:hover,
+.infoContact:-webkit-autofill:focus,
+.infoContact:-webkit-autofill:active {
+    background-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+    /* Вимикає автофонове підсвічування */
+    color: black !important;
+}
+
+@media screen and (min-width: 375px) {
+    .input {
+        width: 310px;
+    }
+
+    .timeDropdown button {
+        width: 310px;
+    }
+
+    .timeInputWrap {
+        width: 310px;
+    }
+
+    .infoContact {
+        width: 310px;
+    }
+
+    .comment {
+        width: 310px;
+    }
+
+    .buttonContact {
+        width: 310px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .overlayContact {
+        padding: 0;
+
+    }
+
+    .modalContact {
+        background: #fbfbfb;
+        border-radius: 30px;
+        top: 150px;
+        position: relative;
+        width: 600px;
+        height: 908px;
+        padding: 64px;
+    }
+
+    .closeBtn {
+        font-size: 62px;
+    }
+
+    .contactTitle {
+        width: 472px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+    }
+
+    .contactForm {
+        display: flex;
+        flex-direction: column;
+        width: 472px;
+        height: 300px;
+    }
+
+    .contactItem {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 8px;
+    }
+
+    .input {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 8px;
+        border: 1px solid rgba(17, 16, 28, 0.1);
+        border-radius: 12px;
+        background-color: #fff;
+        padding: 16px 15px 16px 18px;
+        height: 52px;
+        width: 232px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 137%;
+        color: #11101C;
+        outline: none;
+    }
+
+    .timeDropdown button {
+        width: 100%;
+    }
+
+    .infoContact {
+        width: 472px;
+    }
+
+    .timeInputWrap {
+        width: 232px;
+    }
+
+    .comment {
+        width: 472px;
+    }
+
+    .buttonContact {
+        width: 472px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .overlayContact {
+        padding: 0;
+
+    }
+
+    .modalContact {
+        background: #fbfbfb;
+        border-radius: 30px;
+        position: relative;
+        top: 0;
+        width: 600px;
+        height: 908px;
+        padding: 64px;
+    }
+
+    .closeBtn {
+        font-size: 62px;
+    }
+
+    .contactTitle {
+        width: 472px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+    }
+
+    .contactForm {
+        display: flex;
+        flex-direction: column;
+        width: 472px;
+        height: 300px;
+    }
+
+    .contactItem {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 8px;
+    }
+
+    .input {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 8px;
+        border: 1px solid rgba(17, 16, 28, 0.1);
+        border-radius: 12px;
+        background-color: #fff;
+        padding: 16px 15px 16px 18px;
+        height: 52px;
+        width: 232px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 137%;
+        color: #11101C;
+        outline: none;
+    }
+
+    .timeDropdown button {
+        width: 100%;
+    }
+
+    .infoContact {
+        width: 472px;
+    }
+
+    .timeInputWrap {
+        width: 232px;
+    }
+
+    .comment {
+        width: 472px;
+    }
+
+    .buttonContact {
+        width: 472px;
+    }
+}

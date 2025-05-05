@@ -19,7 +19,7 @@ export default function App() {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route extra path='/' element={<Home />} />
-          <Route extra path='/nannies' element={<Psychologists />} />
+          <Route extra path='/psychologists' element={<Psychologists />} />
           <Route extra path='/favorites' element={<Favorites />} />
 
           <Route path="*" element={<NotFoundPage />} />

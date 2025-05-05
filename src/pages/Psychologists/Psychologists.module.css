@@ -1,0 +1,439 @@
+.wrapperNannies {
+    min-width: 290px;
+    min-height: 800px;
+    background: #F3F3F3;
+    padding: 35px 0;
+    margin: 0 15px;
+}
+
+/* стилі для вибору елементів */
+.customSelectWrapper {
+    position: relative;
+    width: 226px;
+    margin-bottom: 32px;
+}
+
+.filtersNannies {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    color: #8a8a89;
+    margin-bottom: 8px;
+}
+
+.customSelect {
+    background-color: var(--color-primary);
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 111%;
+    color: #fbfbfb;
+    border-radius: 14px;
+    padding: 16px 18px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Кастомна стрілочка */
+.arrow {
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M31.5 192h257c28.5 0 42.8 34.5 22.6 54.6l-128.5 128.5c-12.5 12.5-32.8 12.5-45.3 0L8.9 246.6C-11.3 226.5 2.7 192 31.5 192z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.customOptions {
+    list-style: none;
+    margin-top: 8px;
+    padding: 18px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 20px 69px 0 rgba(0, 0, 0, 0.07);
+    background: #fff;
+    z-index: 100;
+    max-height: 244px;
+}
+
+.optionItem {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 111%;
+    color: rgba(17, 16, 28, 0.3);
+    cursor: pointer;
+    padding-bottom: 12px;
+    transition: background 0.2s ease;
+}
+
+.optionItem:hover {
+    background-color: #ffffff;
+    color: #11101c;
+}
+
+
+/* деталі няні */
+
+.detailsNannies {
+    border-radius: 24px;
+    height: auto;
+    background-color: #fbfbfb;
+    margin-bottom: 32px;
+}
+
+.imgContainer {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #fbfbfb;
+    border-radius: 30px;
+    border: 2px solid var(--color-hover-primary);
+}
+
+.statusWrapper {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    background-color: #fbfbfb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.greenDot {
+    width: 10px;
+    height: 10px;
+    background-color: #38cd3e;
+    border-radius: 50%;
+}
+
+.imgNannies {
+    width: 96px;
+    height: 96px;
+    border-radius: 15px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.detailsLink {
+    min-width: 288px;
+}
+
+.detailsItems {
+    margin-bottom: 8px;
+}
+
+.detailsTitle {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #8a8a89;
+    margin: 20px 0;
+}
+
+.detailsText {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #11101c;
+    margin-bottom: 10px;
+}
+
+.iconStar {
+    width: 16px;
+    height: 16px;
+    fill: #FFC531;
+}
+
+.priceNumber {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #38cd3e;
+}
+
+.iconMap {
+    width: 16px;
+    height: 16px;
+    fill: #fafafa;
+    stroke: #11101c;
+}
+
+.iconHeart {
+    width: 26px;
+    height: 26px;
+    fill: #fafafa;
+    stroke: var(--color-primary);
+}
+
+.iconHeart:hover {
+    fill: var(--color-primary);
+    stroke: var(--color-primary);
+}
+
+.iconHeartActive {
+    fill: var(--color-primary);
+    stroke: var(--color-primary);
+}
+
+.line {
+    display: none;
+}
+
+.nameNanny {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: #11101c;
+    margin-bottom: 24px;
+}
+
+.infoNanny {
+    margin-bottom: 24px;
+}
+
+.info {
+    border-radius: 24px;
+    min-height: 40px;
+    padding: 8px 16px;
+    background-color: #f3f3f3;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #11101C;
+    margin-bottom: 8px;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.infoConditions {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #11101C;
+    margin-bottom: 16px;
+}
+
+.detail {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #8a8a89;
+
+}
+
+/* Кнопка Read more*/
+
+.readMore {
+    background-color: transparent;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-decoration: underline;
+    color: #11101c;
+    margin-bottom: 24px;
+}
+
+
+.selected {
+    background-color: #f4c550;
+}
+
+.aboutText {
+    max-width: 992px;
+    min-height: 40px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: rgba(17, 16, 28, 0.5);
+    margin-bottom: 14px;
+}
+
+.reviewsList {
+    min-height: 80px;
+}
+
+.reviewItem {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.reviewFirst {
+    display: flex;
+    gap: 12px;
+}
+
+.reviewerCircle {
+    border-radius: 100px;
+    width: 44px;
+    height: 44px;
+    background: var(--color-hover-primary);
+    padding: 12px 14px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--color-primary);
+}
+
+.reviewName {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #11101C;
+    margin-bottom: 5px;
+}
+
+.iconStar {
+    margin-right: 8px;
+}
+
+.reviewItemText {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: rgba(17, 16, 28, 0.5);
+}
+
+.openModalBtn {
+    border-radius: 30px;
+    padding: 14px 28px;
+    width: 215px;
+    height: 48px;
+    background: var(--color-primary);
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+    margin-bottom: 24px;
+}
+
+.openModalBtn:hover,
+.openModalBtn:focus {
+    color: var(--color-primary);
+    background-color: #fbfbfb;
+    border: 1px solid var(--color-primary);
+}
+
+@media screen and (min-width: 375px) {
+    .wrapperNannies {
+        margin: 0 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .wrapperNannies {
+        margin: 0 32px;
+    }
+
+    .filtersNannies {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .wrapperNannies {
+        width: 1440px;
+        min-height: 1488px;
+        padding: 64px 128px;
+        margin: 0 auto;
+    }
+
+    .detailsNannies {
+        display: flex;
+        gap: 24px;
+        border-radius: 24px;
+        padding: 24px;
+        max-width: 1184px;
+    }
+
+    .detailsItems {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 998px;
+        height: 24px;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .detailsLink {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        min-width: 495px;
+        height: 24px;
+    }
+
+    .line {
+        color: #d1d1c7;
+    }
+
+    .detailsText {
+        margin: 0;
+    }
+
+    .infoNanny {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 8px;
+        margin-bottom: 24px;
+    }
+
+    .info {
+        min-width: 88px;
+        border-radius: 24px;
+        height: 40px;
+        padding: 8px 16px;
+        background-color: #f3f3f3;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #11101C;
+    }
+
+    .reviewsList {
+        width: 482px;
+    }
+}
