@@ -107,8 +107,8 @@ export default function Favorites() {
         setExpandedPsychologistId((prevId) => (prevId === psychologistId ? null : psychologistId));
     };
 
-    // Фільтруєю лише нянь, які є в `favorites`
-    const favoritePsychologists = psychologist.filter((psychologist) => favorites.includes(psychologist.id));
+    // Фільтруєю лише психологів, які є в `favorites`
+    const favoritePsychologists = psychologists.filter((psychologist) => favorites.includes(psychologist.id));
 
 
     // // При завантаженні сторінки зчитую дані з localStorage
@@ -138,7 +138,6 @@ export default function Favorites() {
 
     const sortAndFilterPsychologists = () => {
         let sorted = [...favoritePsychologists];
-
         switch (selectedOption) {
             case 'A to Z':
                 sorted.sort((a, b) => a.name.localeCompare(b.name));
@@ -146,11 +145,11 @@ export default function Favorites() {
             case 'Z to A':
                 sorted.sort((a, b) => b.name.localeCompare(a.name));
                 break;
-            case 'Less than 10$':
-                sorted = sorted.filter(nanny => nanny.price_per_hour < 10);
+            case 'Price: Low to High':
+                sorted.sort((a, b) => a.price_per_hour - b.price_per_hour);
                 break;
-            case 'Greater than 10$':
-                sorted = sorted.filter(nanny => nanny.price_per_hour >= 10);
+            case 'Price: High to Low':
+                sorted.sort((a, b) => b.price_per_hour - a.price_per_hour);
                 break;
             case 'Popular':
                 sorted.sort((a, b) => b.rating - a.rating);
@@ -252,20 +251,16 @@ export default function Favorites() {
                             <h2 className={css.namePsychologist}>{psychologist.name}</h2>
                             <div className={css.infoPsychologist}>
                                 <p className={css.info}>
-                                    <span className={css.detail}>Age: </span>
-                                    <span className={css.underlined}>{age}</span>
-                                </p>
-                                <p className={css.info}>
                                     <span className={css.detail}>Experience:</span> {psychologist.experience}
                                 </p>
                                 <p className={css.info}>
-                                    <span className={css.detail}>Kids age:</span> {psychologist.kids_age}
+                                    <span className={css.detail}>License:</span> {psychologist.license}
                                 </p>
                                 <p className={css.info}>
-                                    <span className={css.detail}>Characters: </span> {psychologist.characters?.join(',')}
+                                    <span className={css.detail}>Specialization: </span> {psychologist.specialization}
                                 </p>
                                 <p className={css.info}>
-                                    <span className={css.detail}>Education: </span> {psychologist.education}
+                                    <span className={css.detail}>Initial_consultation: </span> {psychologist.initial_consultation}
                                 </p>
                             </div>
                             <p className={css.aboutText}>{psychologist.about || "No information available"}</p>

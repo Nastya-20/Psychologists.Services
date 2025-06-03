@@ -58,7 +58,7 @@
     margin-bottom: 40px;
 }
 
-.infoNanny {
+.infoPsychologist {
     width: 192px;
     height: 44px;
     display: flex;
@@ -66,13 +66,13 @@
     margin-bottom: 23px;
 }
 
-.imgNanny {
+.imgPsychologist {
     border-radius: 100px;
     width: 44px;
     height: 44px;
 }
 
-.nannyText {
+.psychologistText {
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 500;
     font-size: 12px;
@@ -81,7 +81,7 @@
     margin-bottom: 4px;
 }
 
-.nannyName {
+.psychologistName {
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -113,7 +113,7 @@ input::placeholder {
     font-weight: 400;
     font-size: 16px;
     line-height: 137%;
-    color: #11101C;
+    color: #191A15;
 }
 
 input:hover,
@@ -150,7 +150,7 @@ input:focus {
     font-weight: 400;
     font-size: 16px;
     line-height: 125%;
-    color: #11101c;
+    color: #191A15;
     margin-bottom: 4px;
     outline: none;
 }
@@ -171,7 +171,7 @@ input:focus {
     width: 16px;
     height: 16px;
     fill: #fafafa;
-    stroke: #11101c;
+    stroke: #191A15;
 }
 
 .dropdownMenu {
@@ -205,15 +205,15 @@ input:focus {
 
 .dropdownItem:hover,
 .dropdownItem:focus {
-    color: #11101c;
+    color: #191A15;
 }
 
 .dropdownItem:active {
-    color: #11101c;
+    color: #191A15;
 }
 
 .disabledItem {
-    color: #11101c;
+    color: #191A15;
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -233,7 +233,7 @@ input:focus {
     font-weight: 400;
     font-size: 16px;
     line-height: 137%;
-    color: #11101C;
+    color: #191A15;
     outline: none;
 }
 
@@ -242,7 +242,7 @@ textarea::placeholder {
     font-weight: 400;
     font-size: 16px;
     line-height: 137%;
-    color: #11101C;
+    color: #191A15;
     outline: none;
 }
 
@@ -394,7 +394,7 @@ textarea:focus {
         font-weight: 400;
         font-size: 16px;
         line-height: 137%;
-        color: #11101C;
+        color: #191A15;
         outline: none;
     }
 
@@ -474,7 +474,7 @@ textarea:focus {
         font-weight: 400;
         font-size: 16px;
         line-height: 137%;
-        color: #11101C;
+        color: #191A15;
         outline: none;
     }
 

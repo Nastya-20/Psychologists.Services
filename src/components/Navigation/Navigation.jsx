@@ -74,7 +74,7 @@ export default function Navigation() {
     return (
         <header className={isFixed ? `${css.headerContainer} ${css.fixed}` : css.headerContainer}>
             <nav className={css.nav}>
-                <NavLink to="/" className={css.navTitle}>Psychologists.Services</NavLink>
+                <NavLink to="/" className={css.navTitle}><span className={css.logo}>psychologists.</span>services</NavLink>
                 <button type="button" className={css.openMenuBtn} onClick={toggleMenu}>
                     <svg className={css.openMenuIcons} width="32" height="32">
                         <use href="/icons.svg#icon-menu"></use>

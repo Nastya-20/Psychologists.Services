@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin: 0;
+    background-color: var(--color-primary);
+    padding: 5px;
 }
 
 .themeTitle {
@@ -31,14 +32,14 @@
 
 @media screen and (min-width: 375px) {
     .themeWrap {
-        top: 50%;
+        top: 0;
         left: 63%;
     }
 }
 
 @media screen and (min-width: 768px) {
     .themeWrap {
-        top: 55%;
+        top: 0;
         left: 78%;
         gap: 10px;
     }
@@ -46,9 +47,9 @@
 
 @media screen and (min-width: 1440px) {
     .themeWrap {
-        width: 100px;
-        top: 15%;
-        left: 88%;
-        gap: 16px;
+        width: 120px;
+        top: 0;
+        left: 84%;
+        gap: 10px;
     }
 }

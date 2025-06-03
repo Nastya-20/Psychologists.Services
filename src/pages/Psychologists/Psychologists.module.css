@@ -1,7 +1,7 @@
-.wrapperNannies {
+.wrapperPsychologists {
     min-width: 290px;
     min-height: 800px;
-    background: #F3F3F3;
+    background: #Fbfbfb;
     padding: 35px 0;
     margin: 0 15px;
 }
@@ -13,7 +13,7 @@
     margin-bottom: 32px;
 }
 
-.filtersNannies {
+.filtersPsychologists {
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -84,9 +84,9 @@
 }
 
 
-/* деталі няні */
+/* деталі психолога */
 
-.detailsNannies {
+.detailsPsychologists {
     border-radius: 24px;
     height: auto;
     background-color: #fbfbfb;
@@ -128,7 +128,7 @@
     border-radius: 50%;
 }
 
-.imgNannies {
+.imgPsychologists {
     width: 96px;
     height: 96px;
     border-radius: 15px;
@@ -179,18 +179,12 @@
     color: #38cd3e;
 }
 
-.iconMap {
-    width: 16px;
-    height: 16px;
-    fill: #fafafa;
-    stroke: #11101c;
-}
 
 .iconHeart {
     width: 26px;
     height: 26px;
     fill: #fafafa;
-    stroke: var(--color-primary);
+    stroke: #191A15;
 }
 
 .iconHeart:hover {
@@ -207,7 +201,7 @@
     display: none;
 }
 
-.nameNanny {
+.namePsychologist {
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 500;
     font-size: 24px;
@@ -216,7 +210,7 @@
     margin-bottom: 24px;
 }
 
-.infoNanny {
+.infoPsychologist {
     margin-bottom: 24px;
 }
 
@@ -317,7 +311,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    color: #11101C;
+    color: #191A15;
     margin-bottom: 5px;
 }
 
@@ -356,30 +350,30 @@
 }
 
 @media screen and (min-width: 375px) {
-    .wrapperNannies {
+    .wrapperPsychologists {
         margin: 0 20px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .wrapperNannies {
+    .wrapperPsychologists {
         margin: 0 32px;
     }
 
-    .filtersNannies {
+    .filtersPsychologists {
         margin-left: 5px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .wrapperNannies {
+    .wrapperPsychologists {
         width: 1440px;
         min-height: 1488px;
         padding: 64px 128px;
         margin: 0 auto;
     }
 
-    .detailsNannies {
+    .detailsPsychologists {
         display: flex;
         gap: 24px;
         border-radius: 24px;
@@ -399,9 +393,8 @@
 
     .detailsLink {
         display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        min-width: 495px;
+        gap: 32px;
+        min-width: 285px;
         height: 24px;
     }
 
@@ -413,7 +406,7 @@
         margin: 0;
     }
 
-    .infoNanny {
+    .infoPsychologist {
         display: flex;
         flex-wrap: wrap;
         gap: 16px 8px;
@@ -430,10 +423,14 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
-        color: #11101C;
+        margin: 0;
+        color: #191A15;
     }
-
+    .reviewItemText {
+        width: 992px;
+    }
+    
     .reviewsList {
         width: 482px;
     }
-}
+    }

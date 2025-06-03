@@ -14,7 +14,7 @@ export default function Home() {
     }
 
     return (
-        <div className={css.container} style={{ backgroundColor: 'var(--color-primary)' }}>
+        <div className={css.container}>
             <div className={css.homeTitle}>
                 <h1 className={css.homeName}>The road to the<span className={css.depths}> depths</span> of the human soul</h1>
                 <p className={css.homeText}>We help you to reveal your potential, overcome
@@ -47,7 +47,6 @@ export default function Home() {
                 </div>
             </div>
 
-            <hr className={css.divider} />
-        </div>
+      </div>
     );
 }

@@ -36,7 +36,7 @@ export default function UserMenu() {
 
             setTimeout(() => {
                 setIsRegisterOpen(false);
-                navigate('/nannies');
+                navigate('/psychologists');
             }, 300);
         } catch (error) {
             if (error.code === "auth/email-already-in-use") {
@@ -58,11 +58,11 @@ export default function UserMenu() {
             const userName = loggedInUser.displayName || email;  // Якщо ім'я не задано, використовуємо email
             toast.success(`User logged in successfully!, Welcome, ${userName}`);
 
-            // Перехід на сторінку нянь
+            // Перехід на сторінку психологів
             setTimeout(() => {
                 setIsLoginOpen(false);
                 setError("");
-                navigate('/nannies');
+                navigate('/psychologists');
             });
 
         } catch (error) {
@@ -82,7 +82,7 @@ export default function UserMenu() {
             await signOut(auth);
             toast.success("Logged out successfully!");
 
-            navigate('/nannies');
+            navigate('/зsychologistі');
         } catch (error) {
             toast.error("Logout failed. Please try again.");
         }
@@ -151,7 +151,8 @@ export default function UserMenu() {
                     <h2 className={css.loginTitle}>Log In</h2>
                     <p className={css.loginText}>
                         Welcome back! Please enter your credentials
-                        to access your account and continue your babysitter search.</p>
+                        to access your account and continue your
+                        search for a psychologist.</p>
                     {error && <p className={css.errorText}>{error}</p>}
                     <LoginForm
                         onSubmit={handleLogin}
@@ -167,10 +168,10 @@ export default function UserMenu() {
             {isRegisterOpen && (
                 <AuthModal className={css.registration} onClose={() => setIsRegisterOpen(false)}>
                     <h2 className={css.registrationTitle}>Registration</h2>
-                    <p className={css.registrationText}>Thank you for your
-                        interest in our platform! In order to register,
-                        we need some information. Please provide us with
-                        the following information.</p>
+                    <p className={css.registrationText}>
+                        Thank you for your interest in our platform!
+                        In order to register, we need some information.
+                        Please provide us with the following information.</p>
                     {error && <p className={css.errorText}>{error}</p>}
                     <RegistrationForm
                         onSubmit={handleRegister}

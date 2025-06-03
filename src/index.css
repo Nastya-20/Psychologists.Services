@@ -3,7 +3,7 @@
   --line-height: 1.5;
   --font-weight: 400;
   --color-text: #191A15;
-  --color-bg: #fbfbfb;
+  --background-color: #fbfbfb;
 
 }
 
@@ -34,6 +34,7 @@
 }
 
 body {
+  background-color: #fbfbfb;
   height: auto;
   margin: 0;
   padding: 0;

@@ -1,6 +1,6 @@
 .headerContainer {
     min-width: 290px;
-    background-color: var(--color-primary);
+    background-color: #fbfbfb;
     margin: 15px 15px 0 15px;
     padding: 15px;
     border-radius: 30px 30px 0 0;
@@ -19,11 +19,20 @@
     height: 20px;
     text-decoration: none;
     font-family: "Helvetica Neue", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 18px;
     line-height: 112%;
     letter-spacing: 0.01em;
-    color: #fbfbfb;
+    color: #191A15;
+}
+
+.logo {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: 0.03em;
+    color: var(--color-primary);
 }
 
 .navigation {
@@ -43,7 +52,7 @@
 }
 
 .openMenuIcons {
-    stroke: #fbfbfb;
+    stroke: #191A15;
 }
 
 
@@ -67,32 +76,16 @@
 
 @media screen and (min-width: 1440px) {
     .headerContainer {
-        /* background-color: var(--color-primary); */
-        height: 88px;
-        padding: 30px 120px;
+        height: 96px;
+        padding: 24px 128px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         z-index: 1000;
         transition: all 0.3s ease-in-out;
-        margin: 0 auto;
         border-radius: 0;
-    }
-
-    /* Для головної сторінки фіксуємо хедер */
-    .fixed {
-        background-color: transparent;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        width: 1184px;
-        height: 48px;
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
+        border: 1px solid rgba(25, 26, 21, 0.1);
+        margin: 0 auto;
     }
 
     .nav {
@@ -108,16 +101,23 @@
         align-items: center;
         justify-content: space-between;
         gap: 40px;
-        margin-right: 80px;
+        margin-right: 345px;
     }
-
+        .link {
+            font-family: "Helvetica Neue", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 125%;
+            color: #191A15;
+            text-decoration: none;   
+        }
     .active {
         font-family: "Helvetica Neue", sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 125%;
         letter-spacing: -0.01em;
-        color: #fbfbfb;
+        color: #191A15;
         position: relative;
     }
 
@@ -129,7 +129,7 @@
         transform: translateX(-50%);
         width: 8px;
         height: 8px;
-        background-color: #fbfbfb;
+        background-color: var(--color-primary);
         border-radius: 50%;
     }
 
@@ -141,7 +141,7 @@
         width: 164px;
         height: 28px;
         font-size: 24px;
-        margin-right: 487px;
+        margin-right: 230px;
     }
 
     .navUserMenu {

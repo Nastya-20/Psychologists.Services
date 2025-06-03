@@ -10,17 +10,10 @@ import { onAuthStateChanged } from "firebase/auth";
 import css from './ContactForm.module.css';
 
 const schema = yup.object().shape({
-    address: yup.string().required('Address is required'),
     phone: yup
         .string()
         .matches(/^\d+$/, 'Only numbers allowed')
         .required('Phone number is required'),
-    age: yup
-        .number()
-        .typeError('Age must be a number')
-        .positive('Age must be a positive number')
-        .integer('Age must be a whole number')
-        .required('Child\'s age is required'),
     time: yup
         .string()
         .required('Time is required'),
@@ -32,7 +25,7 @@ const schema = yup.object().shape({
     comment: yup.string().required('Comment is required'),
 });
 
-export default function ContactForm({ toggleModal, isOpen, nanny }) {
+export default function ContactForm({ toggleModal, isOpen, psychologist }) {
     const [user, setUser] = React.useState(null);
     React.useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -89,19 +82,18 @@ export default function ContactForm({ toggleModal, isOpen, nanny }) {
                             &times;
                         </button>
                         <div className={css.contactkWrap}>
-                            <h1 className={css.contactTitle}>Make an appointment with a babysitter</h1>
+                            <h1 className={css.contactTitle}>Make an appointment with a psychologists</h1>
                             <p className={css.contactText}>
-                                Arranging a meeting with a caregiver for
-                                your child is the first step to creating
-                                a safe and comfortable environment.
-                                Fill out the form below so we can match
-                                you with the perfect care partner.</p>
-                            {nanny && (
-                                <div className={css.infoNanny}>
-                                    <img className={css.imgNanny} width="96" height="96" src={nanny.avatar_url} alt={nanny.name} />
-                                    <div className={css.myNanny}>
-                                        <p className={css.nannyText}>Your nanny</p>
-                                        <h3 className={css.nannyName}>{nanny.name}</h3>
+                                You are on the verge of changing your life for the better.
+                                Fill out the short form below to book your personal appointment
+                                with a professional psychologist. We guarantee confidentiality
+                                and respect for your privacy.</p>
+                            {psychologist && (
+                                <div className={css.infoPsychologist}>
+                                    <img className={css.imgPsychologist} width="44" height="44" src={psychologist.avatar_url} alt={psychologist.name} />
+                                    <div className={css.myPsychologist}>
+                                        <p className={css.psychologistText}>Your psychologist</p>
+                                        <h3 className={css.psychologistName}>{psychologist.name}</h3>
                                     </div>
                                 </div>
                             )}
@@ -109,35 +101,23 @@ export default function ContactForm({ toggleModal, isOpen, nanny }) {
 
                         <form className={css.contactForm} onSubmit={handleSubmit(onSubmit)}>
                             <div className={css.contactItem}>
-
-                                <div>
-                                    <p className={css.error}>{errors.address?.message}</p>
-                                    <input
-                                        className={css.input}
-                                        type="text"
-                                        placeholder="Address"
-                                        {...register('address')}
-                                    />
-
-                                </div>
+                                <p className={css.error}>{errors.name?.message}</p>
+                                <input
+                                    className={css.infoContact}
+                                    type="text"
+                                    placeholder="Name"
+                                    {...register('name')}
+                                />
                                 <div>
                                     <p className={css.error}>{errors.phone?.message}</p>
                                     <input
                                         className={css.input}
                                         type="text"
-                                        placeholder="Phone number"
+                                        placeholder="+380"
                                         {...register('phone')}
                                     />
                                 </div>
-                                <div>
-                                    <p className={css.error}>{errors.age?.message}</p>
-                                    <input
-                                        className={css.input}
-                                        type="text"
-                                        placeholder="Child's age"
-                                        {...register('age')}
-                                    />
-                                </div>
+                         
                                 <div className={css.timeInputWrap}>
                                     <p className={css.error}>{errors.time?.message}</p>
                                     <input
@@ -197,13 +177,6 @@ export default function ContactForm({ toggleModal, isOpen, nanny }) {
                                 {...register('email')}
                             />
 
-                            <p className={css.error}>{errors.name?.message}</p>
-                            <input
-                                className={css.infoContact}
-                                type="text"
-                                placeholder="Father's or mother's name"
-                                {...register('name')}
-                            />
                             <p className={css.error}>{errors.comment?.message}</p>
                             <textarea
                                 className={css.comment}
